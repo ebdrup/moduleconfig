@@ -1,0 +1,37 @@
+{
+  "author": "Allan Ebdrup",
+  "name": "moduleconfig",
+  "description": "configuration loading for node modules",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Muscula/moduleconfig"
+  },
+  "private": false,
+  "main": "./lib/moduleConfig.js",
+  "engines": {
+    "node": ">=0.6.20",
+    "npm": ">=1.1.9"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "node ./bin/runTests.js"
+  },
+  "devDependencies": {
+    "mocha": "",
+    "chai": "",
+    "sinon": "",
+    "sinon-chai": "",
+    "jshint": "0.x"
+  },
+  "readmeFilename": "README.md",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "module",
+    "configuration"
+  ],
+  "license": "APACHE 2.0",
+  "gitHead": "683b95ea904694180021662e89711cf06e0f77f5"
+}
