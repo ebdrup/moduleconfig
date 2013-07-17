@@ -7,20 +7,24 @@ If you are building a node module that needs a configuration file, you have come
 You are building a module `X` with a config file
 ------------------------------------------------
 
-The module `X` has a configuration, by convention this configuration specified in in the file `X.config.js`.
+The module `MyModule` has a configuration, by convention this configuration specified in in the file `MyModule.config.js`.
 
-In project `P` the module `X` is required.
-In project `P` the module `M` is also required
-Module also `M` requires `X`
+In project `Main` the module `MyModule` is required.
+In project `Main` the module `ExternalModule` is also required
+Module also `ExternalModule` requires `MyModule`
 
-This means that when the module `M` uses `X` the configuration should be loaded from `P/node_modules/M/X.config.js`,
-and when the project `P` uses the module `X` the configuration should be loaded from `P/X.config.js`
+This means that when the module `ExternalModule` uses `MyModule` the configuration should be loaded from `P/node_modules/ExternalModule/MyModule.config.js`,
+and when the project `Main` uses the module `MyModule` the configuration should be loaded from `P/MyModule.config.js`
 
 Problem
 -------
-Because `P` and `M` both require the same version of `X`. `npm` only installs `X` in `P/node_modules/X`.
-`X` is *not* installed in `P/node_modules/M/node_modules/X`. Therefore the `require`-ing `X` does not load the correct
-config
+Because `Main` and `ExternalModule` both require the same version of `MyModule`. 
+`npm` only installs `MyModule` in `P/node_modules/MyModule`.
+`MyModule` is *not* installed in `P/node_modules/M/node_modules/MyModule`. 
+
+Therefore the `require`-ing `MyModule` from the code `ExternalModule` in does not load the correct
+config. It loads the config from `P/MyModule.config.js` and *not* from `P/node_modules/ExternalModule/MyModule.config.js` as it should.
+The `Main` projects config overrides the `ExternalModule` config.
 
 
 Solution: Use `moduleconfig` in the module `X`
