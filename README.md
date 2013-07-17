@@ -4,7 +4,7 @@ moduleconfig
 loading configuration files for node modules. 
 If you are building a node module that needs a configuration file, you have come to the right place.
 
-You are building a module `X` with a config file
+You are building a module `MyModule` with a config file
 ------------------------------------------------
 
 The module `MyModule` has a configuration, by convention this configuration specified in in the file `MyModule.config.js`.
@@ -27,21 +27,22 @@ config. It loads the config from `P/MyModule.config.js` and *not* from `P/node_m
 The `Main` projects config overrides the `ExternalModule` config.
 
 
-Solution: Use `moduleconfig` in the module `X`
+Solution: Use `moduleconfig` in the module `MyModule`
 ----------------------------------------------
-X.js is the main file pointed to by the `package.json` in the `X` module
+MyModule.js is the main file pointed to by the `package.json` in the `MyModule` module
 ```js
-module.exports = moduleConfig(["X.config.js"], function(configFilePath){
+module.exports = moduleConfig(["MyModule.config.js"], function(configFilePath){
 	return instantiateXfromConfig(require(configFilePath));
 });
 ```
 
 This will mean that this:
 ```
-var x = require("X");
+var myModule = require("MyModule");
 ```
 
-will return an `x` based on `P/node_modules/M/X.config.js` when `X` is required anywhere in the path `P/node_modules/M/...`
+will return an `myModule` based on `Main/node_modules/ExternalModule/MyModule.config.js` when `MyModule` is required 
+from a javascript file anywhere in the path `Main/node_modules/ExternalModule/...`
 
-and it will return an `x` based on `P/X.config.js` when `X` is required by code in `P`.
+and it will return an `myModule` based on `Main/MyModule.config.js` when `MyModule` is required by code in `Main`.
 
