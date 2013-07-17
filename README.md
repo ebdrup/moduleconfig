@@ -11,7 +11,7 @@ The module `MyModule` has a configuration, by convention this configuration spec
 
 - In project `Main` the module `MyModule` is required.
 - In project `Main` the module `ExternalModule` is also required.
-- `ExternalModule` requires `MyModule`
+- `ExternalModule` also requires `MyModule`
 
 This means that when the module `ExternalModule` uses `MyModule` the configuration should be loaded from `P/node_modules/ExternalModule/MyModule.config.js`,
 and when the project `Main` uses the module `MyModule` the configuration should be loaded from `P/MyModule.config.js`
