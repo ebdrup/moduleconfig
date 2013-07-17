@@ -13,17 +13,17 @@ The module `MyModule` has a configuration, by convention this configuration spec
 - In project `Main` the module `ExternalModule` is also required.
 - `ExternalModule` also requires `MyModule`
 
-This means that when the module `ExternalModule` uses `MyModule` the configuration should be loaded from `P/node_modules/ExternalModule/MyModule.config.js`,
-and when the project `Main` uses the module `MyModule` the configuration should be loaded from `P/MyModule.config.js`
+This means that when the module `ExternalModule` uses `MyModule` the configuration should be loaded from `Main/node_modules/ExternalModule/MyModule.config.js`,
+and when the project `Main` uses the module `MyModule` the configuration should be loaded from `Main/MyModule.config.js`
 
 Problem
 -------
 Because `Main` and `ExternalModule` both require the same version of `MyModule`. 
-`npm` only installs `MyModule` in `P/node_modules/MyModule`.
-`MyModule` is *not* installed in `P/node_modules/M/node_modules/MyModule`. 
+`npm` only installs `MyModule` in `Main/node_modules/MyModule`.
+`MyModule` is *not* installed in `Main/node_modules/M/node_modules/MyModule`. 
 
 Therefore the `require`-ing `MyModule` from the code `ExternalModule` in does not load the correct
-config. It loads the config from `P/MyModule.config.js` and *not* from `P/node_modules/ExternalModule/MyModule.config.js` as it should.
+config. It loads the config from `Main/MyModule.config.js` and *not* from `Main/node_modules/ExternalModule/MyModule.config.js` as it should.
 The `Main` projects config overrides the `ExternalModule` config.
 
 
