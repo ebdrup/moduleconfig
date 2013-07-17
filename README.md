@@ -32,7 +32,7 @@ Solution: Use `moduleconfig` in the module `MyModule`
 MyModule.js is the main file pointed to by the `package.json` in the `MyModule` module
 ```js
 module.exports = moduleConfig(["MyModule.config.js"], function(configFilePath){
-	return instantiateXfromConfig(require(configFilePath));
+	return instantiateMyModulefromConfig(require(configFilePath));
 });
 ```
 
