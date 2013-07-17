@@ -1,7 +1,8 @@
 moduleconfig
 ============
 
-loading configuration files for node modules.
+loading configuration files for node modules. 
+If you are building a node module that needs a configuration file, you have come to the right place.
 
 You are building a module `X` with a config file
 ------------------------------------------------
