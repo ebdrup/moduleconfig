@@ -44,6 +44,9 @@ module.exports = moduleConfig(["MyModule.config.js"], function(configFilePath){
 });
 ```
 
+You will have to implement the `instantiateMyModulefromConfig` function yourself.
+
+
 This will mean that this:
 ```
 var myModule = require("MyModule");
