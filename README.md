@@ -4,7 +4,7 @@ moduleconfig
 loading configuration files for node modules. 
 If you are building a node module that needs a configuration file, you have come to the right place.
 
-You are building a module `MyModule` with a config file
+You are building a module `X` with a config file
 ------------------------------------------------
 
 The module `MyModule` has a configuration, by convention this configuration specified in in the file `MyModule.config.js`.
