@@ -6,6 +6,7 @@ If you are building a node module that needs a configuration file, you have come
 
 [![Build Status](https://travis-ci.org/Muscula/moduleconfig.png)](https://travis-ci.org/Muscula/moduleconfig)
 [![NPM version](https://badge.fury.io/js/moduleconfig.png)](http://badge.fury.io/js/moduleconfig)
+[![Dependency Status](https://gemnasium.com/Muscula/moduleconfig.png)](https://gemnasium.com/Muscula/moduleconfig)
 
 You are building a module `MyModule` with a config file
 ------------------------------------------------
