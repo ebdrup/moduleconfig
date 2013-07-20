@@ -38,6 +38,7 @@ Solution: Use `moduleconfig` in the module `MyModule`
 ----------------------------------------------
 MyModule.js is the main file pointed to by the `package.json` in the `MyModule` module
 ```js
+var moduleConfig = require("moduleconfig");
 module.exports = moduleConfig(["MyModule.config.js"], function(configFilePath){
 	return instantiateMyModulefromConfig(require(configFilePath));
 });
