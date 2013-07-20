@@ -30,7 +30,9 @@
   },
   "keywords": [
     "module",
-    "configuration"
+    "configuration",
+    "config",
+    "node"
   ],
   "license": "APACHE 2.0",
   "gitHead": "683b95ea904694180021662e89711cf06e0f77f5"
