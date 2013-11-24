@@ -15,14 +15,14 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "node ./bin/runTests.js"
+    "test": "node test.js"
   },
   "devDependencies": {
     "mocha": "",
     "chai": "",
     "sinon": "",
     "sinon-chai": "",
-    "jshint": "0.x"
+    "mocha-jshint": ""
   },
   "readmeFilename": "README.md",
   "directories": {
