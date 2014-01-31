@@ -34,8 +34,10 @@ config. It loads the config from `Main/config.js` and *not* from `Main/node_modu
 The `Main` projects config overrides the `ExternalModule` config.
 
 
-Solution: Use `moduleconfig` in the module `MyModule`
+Solution
 ----------------------------------------------
+Use `moduleconfig` in the module `MyModule`
+
 MyModule.js is the main file pointed to by the `package.json` in the `MyModule` module
 ```js
 var moduleConfig = require("moduleconfig");
