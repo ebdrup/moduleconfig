@@ -27,7 +27,7 @@ Problem
 -------
 Because `Main` and `ExternalModule` both require the same version of `MyModule`. 
 `npm` only installs `MyModule` in `Main/node_modules/MyModule`.
-`MyModule` is *not* installed in `Main/node_modules/M/node_modules/MyModule`. 
+`MyModule` is *not* installed in `Main/node_modules/ExternalModule/node_modules/MyModule`. 
 
 Therefore the `require`-ing `MyModule` from the code `ExternalModule` in does not load the correct
 config. It loads the config from `Main/MyModule.config.js` and *not* from `Main/node_modules/ExternalModule/MyModule.config.js` as it should.
