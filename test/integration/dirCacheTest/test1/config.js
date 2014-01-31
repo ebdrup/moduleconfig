@@ -1,6 +1,6 @@
 module.exports = {
-	"test1":{
-		message:"My test 1",
-		http:300
+	"test1": {
+		message: "My test 1",
+		http: 300
 	}
 };
