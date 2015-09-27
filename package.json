@@ -18,11 +18,11 @@
     "test": "node test.js"
   },
   "devDependencies": {
-    "mocha": "",
-    "chai": "",
-    "sinon": "",
-    "sinon-chai": "",
-    "mocha-jshint": ""
+    "mocha": "2.3.3",
+    "chai": "3.3.0",
+    "sinon": "1.17.1",
+    "sinon-chai": "2.8.0",
+    "mocha-jshint": "2.2.3"
   },
   "readmeFilename": "README.md",
   "directories": {
