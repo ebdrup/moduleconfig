@@ -59,3 +59,8 @@ from a javascript file anywhere in the path `Main/node_modules/ExternalModule/..
 
 and it will return an `myModule` based on `Main/config.js` when `MyModule` is required by code in `Main`.
 
+
+License
+-------
+
+[MIT](http://opensource.org/licenses/MIT)

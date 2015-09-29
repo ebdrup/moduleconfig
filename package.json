@@ -5,7 +5,7 @@
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Muscula/moduleconfig"
+    "url": "git+https://github.com/Muscula/moduleconfig.git"
   },
   "private": false,
   "main": "./lib/moduleConfig.js",
@@ -24,7 +24,6 @@
     "sinon-chai": "",
     "mocha-jshint": ""
   },
-  "readmeFilename": "README.md",
   "directories": {
     "test": "test"
   },
@@ -34,6 +33,9 @@
     "config",
     "node"
   ],
-  "license": "APACHE 2.0",
-  "gitHead": "683b95ea904694180021662e89711cf06e0f77f5"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Muscula/moduleconfig/issues"
+  },
+  "homepage": "https://github.com/Muscula/moduleconfig#readme"
 }
