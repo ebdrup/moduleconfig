@@ -5,11 +5,11 @@ loading configuration files for node modules.
 If you are building a node module that needs a configuration file, that the user of the module creates, 
 you have come to the right place.
 
-[![Build Status](https://travis-ci.org/Muscula/moduleconfig.png)](https://travis-ci.org/Muscula/moduleconfig)
+[![Build Status](https://travis-ci.org/ebdrup/moduleconfig.png)](https://travis-ci.org/ebdrup/moduleconfig)
 
 [![NPM version](https://badge.fury.io/js/moduleconfig.png)](http://badge.fury.io/js/moduleconfig)
 
-[![Dependency Status](https://gemnasium.com/Muscula/moduleconfig.png)](https://gemnasium.com/Muscula/moduleconfig)
+[![Dependency Status](https://gemnasium.com/ebdrup/moduleconfig.png)](https://gemnasium.com/ebdrup/moduleconfig)
 
 You are building a module `MyModule` with a user config file
 ------------------------------------------------
